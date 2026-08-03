@@ -1,0 +1,15 @@
+﻿
+LineNumber Line                                                           
+---------- ----                                                           
+       650 @media only screen and (min-width: 576px) and (max-width:      
+           767px), (max-width: 575px) {                                   
+      1379   min-width: 235px;                                            
+      1582   min-width: 235px;                                            
+      2421   min-width: 20px;                                             
+      7424 @media (min-width: 1200px) {                                   
+      9369   min-width: 100%;                                             
+     10301     min-width:70px;                                            
+     10440     min-width:50px;                                            
+     10786     min-width:190px;                                           
+
+

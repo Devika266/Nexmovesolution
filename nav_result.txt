@@ -1,0 +1,243 @@
+﻿
+LineNumber Line                                                           
+---------- ----                                                           
+       244   opacity: 0.7;                                                
+       307   opacity: 0.7;                                                
+       319   opacity: 0;                                                  
+       351   opacity: 0;                                                  
+       367     opacity: 0;                                                
+       381     opacity: 0;                                                
+       405   opacity: 0;                                                  
+       406   visibility: hidden;                                          
+       467   opacity: 0.7;                                                
+       492   opacity: 0;                                                  
+       581   opacity: 0.7;                                                
+       726   opacity: 0.34;                                               
+       731   opacity: 0.14;                                               
+       735   opacity: 0;                                                  
+       747   visibility: hidden;                                          
+       772   opacity: 0;                                                  
+       789   opacity: 0;                                                  
+       872     opacity: 0;                                                
+       882     opacity: 0;                                                
+      1158   opacity: 0;                                                  
+      1165     opacity: 0;                                                
+      1175   opacity: 0;                                                  
+      1182     opacity: 0;                                                
+      1192   opacity: 0;                                                  
+      1199     opacity: 0;                                                
+      1217     opacity: 0;                                                
+      1329 .sticky-menu .mobile-menu-area {                               
+      1341   display: none;                                               
+      1387   opacity: 0;                                                  
+      1388   visibility: hidden;                                          
+      1427   opacity: 0;                                                  
+      1428   visibility: hidden;                                          
+      1461   opacity: 0;                                                  
+      1477   opacity: 0;                                                  
+      1478   visibility: hidden;                                          
+      1554   backface-visibility: hidden;                                 
+      1584   opacity: 0;                                                  
+      1585   visibility: hidden;                                          
+      1600 .mobile-menu-area {                                            
+      1613 .mobile-menu-area .mobile-topbar {                             
+      1616 .mobile-menu-area .mobile-topbar .bars {                       
+      1642 .mobile-menu-area .mobile-topbar .bars span {                  
+      1649   backface-visibility: hidden;                                 
+      1652 .mobile-menu-area .mobile-topbar .bars span:last-child,        
+           .mobile-menu-area .mobile-topbar .bars span:first-child {      
+      1655 .mobile-menu-area .mobile-topbar .bars.mobile_menu_bar {       
+      1662 .mobile-menu-area .mobile-topbar .bars.mobile_menu_bar span {  
+      1665 .mobile-menu-area .mobile-topbar .bars:hover span {            
+      1668 .mobile-menu-area {                                            
+      1673 .mobile-menu-area .mobile-menu-overlay {                       
+      1682   opacity: 0;                                                  
+      1683   visibility: hidden;                                          
+      1686 .mobile-menu-area .mobile-menu-overlay.active {                
+      1690 .mobile-menu-area .mobile-menu-main {                          
+      1709   display: none;                                               
+      1712   .mobile-menu-area .mobile-menu-main {                        
+      1717 .mobile-menu-area .mobile-menu-main .logo {                    
+      1721   .mobile-menu-area .mobile-menu-main .logo img {              
+      1725 .mobile-menu-area .mobile-menu-main .close-mobile-menu {       
+      1730 .mobile-menu-area .mobile-menu-main .close-mobile-menu i {     
+      1740 .mobile-menu-area .mobile-menu-main .menu-body .menu-list {    
+      1743 .mobile-menu-area .mobile-menu-main .menu-body .menu-list ul   
+           li a {                                                         
+      1757 .mobile-menu-area .mobile-menu-main .menu-body .menu-list ul   
+           li a i {                                                       
+      1769 .mobile-menu-area .mobile-menu-main .menu-body .menu-list ul   
+           li a:hover {                                                   
+      1772 .mobile-menu-area .mobile-menu-main .menu-body .menu-list ul   
+           li a:hover i {                                                 
+      1776 .mobile-menu-area .mobile-menu-main .menu-body .menu-list ul   
+           li ul {                                                        
+      1778   display: none;                                               
+      1780 .mobile-menu-area .mobile-menu-main .menu-body .menu-list ul   
+           li ul a {                                                      
+      1783 .mobile-menu-area .mobile-menu-main .menu-body .menu-list ul   
+           li ul li:last-child a {                                        
+      1786 .mobile-menu-area .mobile-menu-main .menu-body .menu-list ul   
+           li:last-child a {                                              
+      1789 .mobile-menu-area .mobile-menu-main .off-contact-area {        
+      1792   display: none;                                               
+      1794 .mobile-menu-area .mobile-menu-main .off-contact-info {        
+      1797 .mobile-menu-area .mobile-menu-main .off-contact-info          
+           .info-title {                                                  
+      1804   .mobile-menu-area .mobile-menu-main .off-contact-info        
+           .info-title {                                                  
+      1808 .mobile-menu-area .mobile-menu-main .off-contact-info          
+           .contact-details {                                             
+      1811 .mobile-menu-area .mobile-menu-main .off-contact-info          
+           .contact-details .sub-info {                                   
+      1815   .mobile-menu-area .mobile-menu-main .off-contact-info        
+           .contact-details .sub-info {                                   
+      1819 .mobile-menu-area .mobile-menu-main .off-contact-info          
+           .contact-details p {                                           
+      1826   .mobile-menu-area .mobile-menu-main .off-contact-info        
+           .contact-details p {                                           
+      1830 .mobile-menu-area .mobile-menu-main .off-contact-info          
+           .contact-details p a {                                         
+      1833 .mobile-menu-area .mobile-menu-main .social-icon-list {        
+      1836 .mobile-menu-area .mobile-menu-main .social-icon-list          
+           .follow-title {                                                
+      1843   .mobile-menu-area .mobile-menu-main .social-icon-list        
+           .follow-title {                                                
+      1847 .mobile-menu-area .mobile-menu-main .social-icon-list          
+           .social-icon {                                                 
+      1853 .mobile-menu-area .mobile-menu-main .social-icon-list          
+           .social-icon a {                                               
+      1863 .mobile-menu-area .mobile-menu-main .social-icon-list          
+           .social-icon a:hover {                                         
+      1867 .mobile-menu-area .mobile-menu-main.active {                   
+      1872 .mobile-menu-area .mobile-menu-action-btn {                    
+      1875 .mobile-menu-area .mobile-menu-action-btn a {                  
+      1884 .mobile-menu-area .mobile-menu-action-btn a i {                
+      1888 .mobile-menu-area .mobile-menu-action-btn a:hover {            
+      1892 .mobile-menu-overlay {                                         
+      1896 .mobile-menu-main {                                            
+      1905   visibility: hidden;                                          
+      1906   opacity: 0;                                                  
+      1923   visibility: hidden;                                          
+      1924   opacity: 0;                                                  
+      2153   opacity: 0.98;                                               
+      2219     display: none;                                             
+      2247   opacity: 0.8;                                                
+      2408   opacity: 0;                                                  
+      2771     display: none;                                             
+      2862     display: none;                                             
+      3006     display: none;                                             
+      3016     display: none;                                             
+      3179   opacity: 0;                                                  
+      3185     display: none;                                             
+      3192   opacity: 0;                                                  
+      3198     display: none;                                             
+      3206   opacity: 0;                                                  
+      3240     display: none;                                             
+      3261   opacity: 0.62;                                               
+      3367     display: none;                                             
+      3379   opacity: 0;                                                  
+      3380   visibility: hidden;                                          
+      3401   opacity: 0;                                                  
+      3402   visibility: hidden;                                          
+      3503   opacity: 0;                                                  
+      3604     display: none;                                             
+      3673     display: none;                                             
+      3699     display: none;                                             
+      3729     display: none;                                             
+      3827   display: none;                                               
+      3880     display: none;                                             
+      3900     display: none;                                             
+      3916     display: none;                                             
+      3936     display: none;                                             
+      3947     display: none;                                             
+      3967     display: none;                                             
+      3978     display: none;                                             
+      3989   opacity: 0.4;                                                
+      4060     display: none;                                             
+      4130   opacity: 0.75;                                               
+      4143   opacity: 0.8;                                                
+      4224     display: none;                                             
+      4436   opacity: 0;                                                  
+      4450   opacity: 0;                                                  
+      4625     display: none;                                             
+      4720     display: none;                                             
+      4854     display: none;                                             
+      4869     display: none;                                             
+      5127     display: none;                                             
+      5139     display: none;                                             
+      5191     display: none;                                             
+      5232     display: none;                                             
+      5311   display: none;                                               
+      5314   display: none;                                               
+      5450   opacity: 0;                                                  
+      5451   visibility: hidden;                                          
+      5551     display: none;                                             
+      5797     display: none;                                             
+      5816     display: none;                                             
+      5826     display: none;                                             
+      5846     display: none;                                             
+      5947   display: none;                                               
+      6009   opacity: 0;                                                  
+      6041   opacity: 0;                                                  
+      6064   opacity: 0;                                                  
+      6125   opacity: 0;                                                  
+      6175     display: none;                                             
+      6274   display: none;                                               
+      6373   opacity: 0.8;                                                
+      6430   opacity: 0.8;                                                
+      6432   opacity: 0.8;                                                
+      6552     display: none;                                             
+      6557   opacity: 0.5;                                                
+      6671   opacity: 0;                                                  
+      6672   visibility: hidden;                                          
+      6686   opacity: 0;                                                  
+      6687   visibility: hidden;                                          
+      6702   opacity: 0;                                                  
+      6703   visibility: hidden;                                          
+      6754     display: none;                                             
+      6793     display: none;                                             
+      6948   opacity: 0.7;                                                
+      7074   opacity: 0;                                                  
+      7243   opacity: 0;                                                  
+      7257   opacity: 0;                                                  
+      7304   opacity: 0;                                                  
+      7331   opacity: 0;                                                  
+      7345   opacity: 0;                                                  
+      7346   visibility: hidden;                                          
+      7381   opacity: 0.7;                                                
+      7402   opacity: 0;                                                  
+      7453   opacity: 0;                                                  
+      7454   visibility: hidden;                                          
+      7480   opacity: 0;                                                  
+      7537   opacity: 0;                                                  
+      7589     display: none;                                             
+      7603     display: none;                                             
+      8222   opacity: 0;                                                  
+      8257     display: none;                                             
+      8304   opacity: 0;                                                  
+      8904   opacity: 0;                                                  
+      8938   opacity: 0;                                                  
+      9010   opacity: 0;                                                  
+      9041   opacity: 0;                                                  
+      9104   opacity: 0;                                                  
+      9185   display: none;                                               
+      9309   display: none;                                               
+      9476     display: none;                                             
+      9491     display: none;                                             
+      9585     display: none;                                             
+      9640     display: none;                                             
+      9753     display: none;                                             
+      9998   opacity: 0;                                                  
+     10078     display: none;                                             
+     10141   opacity: 0; /* hide original */                              
+     10151   opacity: 0;                                                  
+     10205     opacity: 0;                                                
+     10236     opacity: 0.98;                                             
+     10337     opacity:0;                                                 
+     10853     display:none;                                              
+     10867     display: none;                                             
+     10956     display:none;                                              
+     10983     display:none;                                              
+
+
