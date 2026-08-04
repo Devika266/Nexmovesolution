@@ -64,10 +64,10 @@
 				<select id="servicesSelect" name="services[]" class="form-select" multiple>
 
 					<?php foreach($services as $service): ?>
-													<option value="<?= base_url('service/'.$service->id); ?>">
-														<?= $service->service_name; ?>
-													</option>
-													<?php endforeach; ?>
+					<option value="<?= base_url('service/'.$service->id); ?>">
+						<?= $service->service_name; ?>
+					</option>
+					<?php endforeach; ?>
 
 				</select>
 
@@ -132,87 +132,99 @@
 		<div class="header-main">
 
 			<!-- ===================== DESKTOP NAVBAR ===================== -->
-<nav class="navbar p-0 navbar-expand-lg d-none d-lg-flex">
-				<a class="navbar-brand" href="<?php echo base_url()?>">
-					<img src="<?php echo base_url()?>assets/website/img/logo/main-logo.png" alt="logo"
-						style="width:200px">
+			<nav class="navbar navbar-expand-xl d-none d-xl-flex custom-navbar">
+
+				<!-- Logo -->
+				<a class="navbar-brand" href="<?= base_url(); ?>">
+					<img src="<?= base_url()?>assets/website/img/logo/main-logo.png" alt="Logo" class="logo-img">
 				</a>
 
+				<!-- Toggle -->
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-					aria-expanded="false" aria-label="Toggle navigation">
+					data-bs-target="#navbarSupportedContent">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent" >
-					<ul class="navbar-nav mx-auto mb-lg-0">
-						<li class="nav-item ">
-							<a class="nav-link" href="<?php echo base_url()?>">
-								Home </i>
-							</a>
-						</li>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+					<ul class="navbar-nav mx-auto">
+
 						<li class="nav-item">
-							<a class="nav-link" href="<?php echo base_url()?>website/about">About Us</a>
+							<a class="nav-link" href="<?= base_url();?>">Home</a>
 						</li>
+
 						<li class="nav-item">
+							<a class="nav-link" href="<?= base_url();?>website/about">About Us</a>
+						</li>
+
+						<li class="nav-item dropdown">
 							<a class="nav-link" href="#">
 								Services <i class="fas fa-chevron-down"></i>
 							</a>
+
 							<ul class="sub-menu list-unstyled">
-								<?php foreach($services as $ser):?>
-								<li><a
-										href="<?php echo base_url();?>service/<?php echo $ser->id;?>"><?php echo $ser->service_name;?></a>
+								<?php foreach($services as $ser): ?>
+								<li>
+									<a href="<?= base_url();?>service/<?= $ser->id;?>">
+										<?= $ser->service_name;?>
+									</a>
 								</li>
-								<?php endforeach;?>
+								<?php endforeach; ?>
 							</ul>
 						</li>
-						<li class="nav-item">
+
+						<li class="nav-item dropdown">
 							<a class="nav-link" href="#">
-								Products<i class="fas fa-chevron-down"></i>
+								Products <i class="fas fa-chevron-down"></i>
 							</a>
+
 							<ul class="sub-menu list-unstyled">
-								<li><a href="javascript:void(0);" onclick="openPopup();">CRM</a></li>
-								<li><a href="javascript:void(0);" onclick="openPopup();">HRMS</a></li>
-								<li><a href="javascript:void(0);" onclick="openPopup();">NexDigiCard</a></li>
-						<li><a href="javascript:void(0);" onclick="openPopup();">NextWap</a></li>
+								<li><a href="javascript:void(0)" onclick="openPopup()">CRM</a></li>
+								<li><a href="javascript:void(0)" onclick="openPopup()">HRMS</a></li>
+								<li><a href="javascript:void(0)" onclick="openPopup()">NexDigiCard</a></li>
+								<li><a href="javascript:void(0)" onclick="openPopup()">NextWapp</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="<?= base_url();?>portfoliomain">Portfolio</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="<?= base_url();?>website/blog">Blog</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="<?= base_url();?>website/contact">Contact</a>
+						</li>
+
 					</ul>
-					</li>
 
-					<li class=" nav-item">
-						<a class="nav-link" href="<?php echo base_url(); ?>portfoliomain">Portfolio</a>
-					</li>
-
-					<li class=" nav-item">
-						<a class="nav-link" href="<?php echo base_url()?>website/blog">
-							Blog</i>
-						</a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" href="<?php echo base_url()?>website/contact">Contact</a>
-					</li>
-					</ul>
 					<div class="menu-right-info">
-						<a class="theme-btn-main style-2 theme-2" href="javascript:void(0);" onclick="openPopup();">
+
+						<a class="theme-btn-main style-2 theme-2" href="javascript:void(0)" onclick="openPopup()">
+
 							<span class="theme-btn-arrow-left">
 								<i class="fa-solid fa-arrow-up-right"></i>
 							</span>
 
-							<span class="theme-btn">Get Started</span>
+							<span class="theme-btn">
+								Get Started
+							</span>
 
 							<span class="theme-btn-arrow-right">
 								<i class="fa-solid fa-arrow-up-right"></i>
 							</span>
+
 						</a>
-<div class="sidebar__toggle offcanvas-btn d-lg-none my-auto">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
+
 					</div>
+
 				</div>
+
 			</nav>
 		</div>
-<div class="mobile-menu-area d-block d-lg-none">
+		<div class="mobile-menu-area d-block d-xl-none">
 			<div class="container">
 				<div class="mobile-topbar">
 					<div class="d-flex justify-content-between align-items-center">
@@ -280,21 +292,21 @@
 									<li><a href="javascript:void(0);" onclick="openPopup();">CRM</a></li>
 									<li><a href="javascript:void(0);" onclick="openPopup();">HRMS</a></li>
 									<li><a href="javascript:void(0);" onclick="openPopup();">NexDigiCard</a></li>
-							<li><a href="javascript:void(0);" onclick="openPopup();">NextWap</a></li>
-						</ul>
-						</li>
+									<li><a href="javascript:void(0);" onclick="openPopup();">NextWap</a></li>
+								</ul>
+							</li>
 
-						<li>
-							<a href="<?php echo base_url(); ?>portfoliomain">Portfolio</a>
-						</li>
+							<li>
+								<a href="<?php echo base_url(); ?>portfoliomain">Portfolio</a>
+							</li>
 
-						<li>
-							<a href="<?php echo base_url(); ?>website/blog">Blog</a>
-						</li>
+							<li>
+								<a href="<?php echo base_url(); ?>website/blog">Blog</a>
+							</li>
 
-						<li>
-							<a href="<?php echo base_url(); ?>website/contact">Contact</a>
-						</li>
+							<li>
+								<a href="<?php echo base_url(); ?>website/contact">Contact</a>
+							</li>
 
 						</ul>
 					</div>

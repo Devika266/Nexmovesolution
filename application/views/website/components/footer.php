@@ -22,11 +22,11 @@
  								Bring in your business data from different tools platform.
  							</p>
  							<div class="social-icon d-flex align-items-center">
- 								<a href="https://www.facebook.com/NexmoveSolutions/"><i
+ 								<a href="https://www.facebook.com/NexmoveSolutions/" target="_blank" rel="noopener noreferrer"><i
  										class="fab fa-facebook-f"></i></a>
- 								<a href="https://www.instagram.com/nexmove_solutions/"><i
+ 								<a href="https://www.instagram.com/nexmove_solutions/" target="_blank" rel="noopener noreferrer"><i
  										class="fab fa-instagram"></i></a>
- 								<a href="https://in.linkedin.com/company/nexmove-solutions"><i
+ 								<a href="https://in.linkedin.com/company/nexmove-solutions" target="_blank" rel="noopener noreferrer"><i
  										class="fab fa-linkedin"></i></a>
  							</div>
  						</div>
@@ -40,6 +40,13 @@
  									<a
  										href="tel:<?= !empty($settings->phone_no) ? htmlspecialchars($settings->phone_no):''; ?>">
  										<?= !empty($settings->phone_no) ? htmlspecialchars($settings->phone_no):''; ?>
+ 									</a><br>
+ 								</li>
+								<li>
+ 									<img src="<?php echo base_url()?>assets/website/img/home-1/call.png" alt="img">
+ 									<a
+ 										href="tel:<?= !empty($settings->whatsApp_number) ? htmlspecialchars($settings->whatsApp_number):''; ?>">
+ 										<?= !empty($settings->whatsApp_number) ? htmlspecialchars($settings->whatsApp_number):''; ?>
  									</a><br>
  								</li>
  								<li>
@@ -68,13 +75,17 @@
  							<li>
  								<a href="<?= base_url('website/about'); ?>">About Us</a>
  							</li>
-
-
-
-
  							<li>
- 								<a href="<?= base_url('website/contact'); ?>">Contact</a>
- 							</li>
+							<a href="<?= base_url();?>portfoliomain">Portfolio</a>
+						</li>
+
+						<li>
+							<a href="<?= base_url();?>website/blog">Blog</a>
+						</li>
+
+						<li>
+							<a href="<?= base_url();?>website/contact">Contact</a>
+						</li>
 
  						</ul>
 
@@ -89,10 +100,10 @@
 
  						<ul class="gt-list-area">
 
- 							<li><a href="javascript:void(0);" onclick="openPopup();">CRM</a></li>
- 							<li><a href="javascript:void(0);" onclick="openPopup();">HRMS</a></li>
- 							<li><a href="javascript:void(0);" onclick="openPopup();">NexDigiCard</a></li>
- 							<li><a href="javascript:void(0);" onclick="openPopup();">NextWap</a></li>
+ 							<li><a href="javascript:void(0);" onclick="openPopup();">Nexmoves CRM</a></li>
+ 							<li><a href="javascript:void(0);" onclick="openPopup();">Nexsmarthr</a></li>
+ 							<li><a href="javascript:void(0);" onclick="openPopup();">Nexdigicard</a></li>
+ 							<li><a href="javascript:void(0);" onclick="openPopup();">NextWapp</a></li>
 
  						</ul>
 

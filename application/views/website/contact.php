@@ -86,10 +86,20 @@
 											<div class="cont">
 												<span>Need help?</span>
 												<h3>
+													<img src="<?php echo base_url()?>assets/website/img/home-1/call.png"
+														alt="img">
 													<a
-														href="mailto:<?= !empty($settings->phone_no) ? htmlspecialchars($settings->phone_no) : ''; ?>">
+														href="tel:<?= !empty($settings->phone_no) ? htmlspecialchars($settings->phone_no) : ''; ?>">
 														<?= !empty($settings->phone_no) ? htmlspecialchars($settings->phone_no) : ''; ?>
 													</a>
+												</h3>
+												<h3>
+													<img src="<?php echo base_url()?>assets/website/img/home-1/call.png"
+														alt="img">
+													<a
+														href="tel:<?= !empty($settings->whatsApp_number) ? htmlspecialchars($settings->whatsApp_number):''; ?>">
+														<?= !empty($settings->whatsApp_number) ? htmlspecialchars($settings->whatsApp_number):''; ?>
+													</a><br>
 												</h3>
 												<h3><a
 														href="mailto:<?= !empty($settings->email_address) ? htmlspecialchars($settings->email_address) : ''; ?>">

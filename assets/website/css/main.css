@@ -2129,7 +2129,6 @@ span {
   display: flex;
   align-items: center;
   gap: 60px;
-  padding-left: 220px;
 }
 @media (max-width: 1600px) {
   .header-1 .menu-right-info {
@@ -11290,3 +11289,100 @@ select{
     width:100%;
 }
 
+/* ================= NAVBAR ================= */
+
+.custom-navbar{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 30px;
+}
+
+.custom-navbar .navbar-brand{
+    flex-shrink:0;
+    margin-right:25px;
+}
+
+.logo-img{
+    width:180px;
+    height:auto;
+    display:block;
+}
+
+.custom-navbar .navbar-collapse{
+    display:flex !important;
+    align-items:center;
+    justify-content:space-between;
+    flex:1;
+}
+
+.custom-navbar .navbar-nav{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.custom-navbar .nav-link{
+    padding:10px 12px;
+    white-space:nowrap;
+    font-size:16px;
+    font-weight:600;
+}
+
+.menu-right-info{
+    margin-left:25px;
+    flex-shrink:0;
+}
+
+/* ---------- Large Screen ---------- */
+
+@media (max-width:1400px){
+
+.logo-img{
+    width:165px;
+}
+
+.custom-navbar .nav-link{
+    font-size:15px;
+    padding:10px 9px;
+}
+
+.theme-btn-main{
+    transform:scale(.92);
+}
+
+}
+
+/* ---------- Laptop ---------- */
+
+@media (max-width:1250px){
+
+.logo-img{
+    width:150px;
+}
+
+.custom-navbar .nav-link{
+    font-size:14px;
+    padding:8px;
+}
+
+.theme-btn-main{
+    transform:scale(.88);
+}
+
+}
+
+/* ---------- Switch to Mobile ---------- */
+
+@media (max-width:1199px){
+
+.custom-navbar{
+    display:none !important;
+}
+
+.mobile-menu-area{
+    display:block !important;
+}
+
+}
