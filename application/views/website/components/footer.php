@@ -30,34 +30,6 @@
  										class="fab fa-linkedin"></i></a>
  							</div>
  						</div>
- 						<div class="footer-widget-items">
- 							<div class="widget-head">
- 								<span class="widget-title">Contact</span>
- 							</div>
- 							<ul class="contact-list">
- 								<li>
- 									<img src="<?php echo base_url()?>assets/website/img/home-1/call.png" alt="img">
- 									<a
- 										href="tel:<?= !empty($settings->phone_no) ? htmlspecialchars($settings->phone_no):''; ?>">
- 										<?= !empty($settings->phone_no) ? htmlspecialchars($settings->phone_no):''; ?>
- 									</a><br>
- 								</li>
-								<li>
- 									<img src="<?php echo base_url()?>assets/website/img/home-1/call.png" alt="img">
- 									<a
- 										href="tel:<?= !empty($settings->whatsApp_number) ? htmlspecialchars($settings->whatsApp_number):''; ?>">
- 										<?= !empty($settings->whatsApp_number) ? htmlspecialchars($settings->whatsApp_number):''; ?>
- 									</a><br>
- 								</li>
- 								<li>
- 									<img src="<?php echo base_url()?>assets/website/img/home-1/email.png" alt="img">
- 									<a
- 										href="mailto:<?= !empty($settings->email_address) ? htmlspecialchars($settings->email_address) : ''; ?>">
- 										<?= !empty($settings->email_address) ? htmlspecialchars($settings->email_address) : ''; ?>
- 									</a>
- 								</li>
- 							</ul>
- 						</div>
  					</div>
  				</div>
  				<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 wow fadeInUp" data-wow-delay=".4s">

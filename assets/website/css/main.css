@@ -9780,7 +9780,7 @@ filter: invert(100%);
   line-height: 150%;
 }
 .contact-us-wrapper .contact-box {
-  background: rgba(255, 255, 255, 0.15);
+  background: white;
   box-shadow: 0px 2px 2px rgba(21, 23, 25, 0.1);
   border-radius: 12px;
   border: 2px solid var(--white);

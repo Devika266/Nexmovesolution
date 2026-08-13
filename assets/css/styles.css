@@ -398,3 +398,41 @@ opacity:1;
     }
 
 }
+.contact-widget {
+    padding: 30px;
+}
+
+.contact-widget .widget-head {
+    margin-bottom: 25px;
+}
+
+.contact-widget .widget-title {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.contact-widget .contact-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-widget .contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.contact-widget .contact-list li img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.contact-widget .contact-list li a {
+    text-decoration: none;
+    padding-left:10px;
+}

@@ -156,22 +156,24 @@ $is_edit = isset($portfolio->id) && !empty($portfolio->id);
 
 													<!-- Slug -->
 													<div>
-														<label class="block text-sm font-medium mb-2">
+    <label class="block text-sm font-medium mb-2">
+        Slug
+    </label>
 
-															Slug
+    <input
+        type="text"
+        name="slug"
+        id="portfolio_slug"
+        class="w-full rounded-xl border border-input px-4 py-3"
+        placeholder="mediflow-health-platform"
+        value="<?= isset($portfolio->slug) ? htmlspecialchars($portfolio->slug, ENT_QUOTES, 'UTF-8') : ''; ?>"
+        autocomplete="off"
+    >
 
-														</label>
-
-														<input type="text" name="slug"
-															class="w-full rounded-xl border border-input px-4 py-3"
-															placeholder="mediflow-health-platform"
-															value="<?php echo isset($portfolio->slug)?$portfolio->slug:''; ?>">
-
-														<small class="text-xs text-muted-foreground">
-															Leave blank to auto generate.
-														</small>
-
-													</div>
+    <small class="text-xs text-muted-foreground">
+        Enter a unique URL-friendly slug.
+    </small>
+</div>
 
 													<!-- Client Name -->
 													<div>

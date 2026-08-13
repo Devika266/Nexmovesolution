@@ -221,7 +221,7 @@ class Admin extends CI_Controller {
     $id = $this->input->post('id');
 
     $data['service_name'] = $this->input->post('service_name');
-    $data['slug'] = $this->input->post('slug');
+    $data['slug'] = str_replace(' ','_',$this->input->post('service_name'));
     $data['shot_description'] = $this->input->post('short_description');
     $data['long_description'] = $this->input->post('long_description');
 
@@ -368,8 +368,7 @@ class Admin extends CI_Controller {
 		$id=$this->input->post('id');
 
 		$data['project_name']=$this->input->post('project_name');
-		$data['slug']=$this->input->post('slug');
-		$data['client_name']=$this->input->post('client_name');
+$data['slug'] = trim($this->input->post('slug', true));		$data['client_name']=$this->input->post('client_name');
 		$data['service']=$this->input->post('service');
 		$data['platform']=$this->input->post('platform');
 		$data['project_date']=$this->input->post('project_date');
@@ -444,11 +443,12 @@ if (!empty($_FILES['main_image']['name'])) {
 	public function blog_settings(){
 		$id=$this->input->post('id');
 
-		$data['hero_tittle']=$this->input->post('hero_tittle');
+		$data['hero_tittle']=$this->input->post('blog_title');
 		$data['hero_description']=$this->input->post('hero_description');
 		$data['blog_title']=$this->input->post('blog_title');
 		$data['blog_description']=$this->input->post('blog_description');
 		$data['blog_content']=$this->input->post('blog_content');
+		$data['slug'] = str_replace(' ','_',$this->input->post('blog_title'));
 
 		$this->load->library('upload');
 

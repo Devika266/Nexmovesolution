@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<?php $this->load->view('website/components/head'); ?>
+	<?php $this->load->view('website/components/head'); ?>
 	<!-- Primary Meta Tags -->
-<title>IT Services in Navi Mumbai | Web, Software, App & Digital Marketing</title>
-<meta name="title" content="IT Services in Navi Mumbai | Web, Software, App & Digital Marketing" />
-<meta name="description" content="Explore NexMove Solutions' expert IT services including website development, software development, mobile apps, SEO, cloud computing, cybersecurity, and AI solutions." />
+	<title>IT Services in Navi Mumbai | Web, Software, App & Digital Marketing</title>
+	<meta name="title" content="IT Services in Navi Mumbai | Web, Software, App & Digital Marketing" />
+	<meta name="description"
+		content="Explore Nexmove Solutions' expert IT services including website development, software development, mobile apps, SEO, cloud computing, cybersecurity, and AI solutions." />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://nexmovesolutions.in/" />
-<meta property="og:title" content="IT Services in Navi Mumbai | Web, Software, App & Digital Marketing" />
-<meta property="og:description" content="Explore NexMove Solutions' expert IT services including website development, software development, mobile apps, SEO, cloud computing, cybersecurity, and AI solutions." />
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://nexmovesolutions.in/" />
+	<meta property="og:title" content="IT Services in Navi Mumbai | Web, Software, App & Digital Marketing" />
+	<meta property="og:description"
+		content="Explore NexMove Solutions' expert IT services including website development, software development, mobile apps, SEO, cloud computing, cybersecurity, and AI solutions." />
 
-<!-- X (Twitter) -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://nexmovesolutions.in/" />
-<meta property="twitter:title" content="IT Services in Navi Mumbai | Web, Software, App & Digital Marketing" />
-<meta property="twitter:description" content="Explore NexMove Solutions' expert IT services including website development, software development, mobile apps, SEO, cloud computing, cybersecurity, and AI solutions." />
+	<!-- X (Twitter) -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://nexmovesolutions.in/" />
+	<meta property="twitter:title" content="IT Services in Navi Mumbai | Web, Software, App & Digital Marketing" />
+	<meta property="twitter:description"
+		content="Explore NexMove Solutions' expert IT services including website development, software development, mobile apps, SEO, cloud computing, cybersecurity, and AI solutions." />
 
-<!-- Meta Tags Generated with https://metatags.io -->
+	<!-- Meta Tags Generated with https://metatags.io -->
 </head>
 
 <body>
@@ -58,25 +62,143 @@
 			</div>
 
 			<!-- About Section Start -->
-			<section class="gt-what-can-section fix section-padding fix">
+			<section class="service-details-section section-padding fix">
 				<div class="container">
 					<div class="service-details-wrapper">
-						<div>
-							<div>
+						<div class="row g-4">
+
+							<!-- LEFT SIDE : SERVICE DETAILS -->
+							<div class="col-lg-8">
 								<div class="service-details-post">
+
+									<!-- Dynamic Service Image -->
 									<div class="details-image">
-										<img src="<?php echo (!empty($service->service_image)) ? base_url('uploads/'.$service->service_image) : base_url('assets/img/inner-page/service-details.jpg'); ?>"
-											alt="<?php echo isset($service->service_name)?htmlspecialchars($service->service_name):'Service Image'; ?>">
+										<img src="<?php echo (!empty($service->service_image)) 
+        ? base_url('uploads/' . $service->service_image) 
+        : base_url('assets/img/inner-page/service-details.jpg'); ?>" alt="<?php echo !empty($service->service_name) 
+        ? htmlspecialchars($service->service_name) 
+        : 'Service Image'; ?>">
 									</div>
-									<div class="details-content">
-										<h2><?php echo isset($service->shot_description)?$service->shot_description:''; ?>
-										</h2>
-										<p class="mb-3">
-											<?= $service->long_description ?? ''; ?>
-										</p>
+
+									<!-- Dynamic Service Description -->
+									<div class="service-description-content">
+
+										<!-- Short Description -->
+										<?php if (!empty($service->shot_description)) : ?>
+										<div class="service-short-description">
+											<p>
+												<?php echo htmlspecialchars($service->shot_description); ?>
+											</p>
+										</div>
+										<?php endif; ?>
+
+
+										<!-- Long Description -->
+										<?php if (!empty($service->long_description)) : ?>
+										<div class="service-long-description">
+											<?php echo $service->long_description; ?>
+										</div>
+										<?php endif; ?>
+
 									</div>
+
+
 								</div>
 							</div>
+
+
+							<!-- RIGHT SIDE : DYNAMIC SIDEBAR -->
+							<div class="col-lg-4">
+								<div class="service-details-sidebar">
+
+									<!-- MORE SERVICES -->
+									<div class="sidebar-widget">
+
+										<div class="sideber-title">
+											<h3 class="wow fadeInUp" data-wow-delay=".2s">
+												<i class="fa-solid fa-star"></i>
+												More services
+											</h3>
+										</div>
+
+										<ul class="service-list-item wow fadeInUp" data-wow-delay=".4s">
+
+											<?php if (!empty($services)) { ?>
+
+											<?php foreach ($services as $other_service) { ?>
+
+											<?php
+                                        // Don't show the currently opened service
+                                        if (
+                                            isset($service->id) &&
+                                            isset($other_service->id) &&
+                                            $service->id == $other_service->id
+                                        ) {
+                                            continue;
+                                        }
+                                        ?>
+
+											<li>
+											<a href="<?= base_url('services/' . $other_service->slug); ?>">
+													<span>
+														<?php echo !empty($other_service->service_name)
+                                                        ? htmlspecialchars($other_service->service_name)
+                                                        : ''; ?>
+													</span>
+
+													<span>
+														<i class="fa-solid fa-arrow-up-right"></i>
+													</span>
+
+												</a>
+											</li>
+
+											<?php } ?>
+
+											<?php } else { ?>
+
+											<li>
+												<span>No other services available</span>
+											</li>
+
+											<?php } ?>
+
+										</ul>
+
+									</div>
+
+
+									<!-- SIDEBAR IMAGE / CTA -->
+									<div class="sidebar-widget-image wow fadeInUp" data-wow-delay=".5s">
+										<img src="<?php echo base_url()?>assets/img/service-details-4.jpg" alt="img">
+
+										<div class="content">
+											<h4>Need any IT Solution services?</h4>
+											<p>
+												Our tech solutions help businesses operate smarter, faster, and more.
+											</p>
+										</div>
+
+										<a class="theme-btn-main style-2 theme-2" href="javascript:void(0)" onclick="openPopup()">
+
+							<span class="theme-btn-arrow-left">
+								<i class="fa-solid fa-arrow-up-right"></i>
+							</span>
+
+							<span class="theme-btn">
+								Get Started
+							</span>
+
+							<span class="theme-btn-arrow-right">
+								<i class="fa-solid fa-arrow-up-right"></i>
+							</span>
+
+						</a>
+									</div>
+
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>
@@ -135,8 +257,8 @@
 												<h3><?= htmlspecialchars($step['title']); ?></h3>
 
 												<div class="process-description">
-    <?= $step['description']; ?>
-</div>
+													<?= $step['description']; ?>
+												</div>
 
 												<span class="gt-number">
 													<?= str_pad($index + 1, 2, '0', STR_PAD_LEFT); ?>
@@ -580,87 +702,144 @@
 			<footer class="footer-section fix hero-ptb image-distortion p-relative z-index-1"
 				data-background="<?php echo  base_url();?>assets/img/home-2/footer-bg.jpg">
 
-				<section class="cta-form-section py-5">
+				<section class="contact-us-section section-padding fix">
 					<div class="container">
 
-						<div class="row justify-content-center">
-							<div class="col-lg-8">
+						<div class="contact-us-wrapper">
 
-								<div class="cta-form-card">
+							<div class="row g-4">
 
-									<h2 class="mb-2">Let's Discuss Your Requirements</h2>
-									<p class="mb-4">
-										Fill out the form below and our team will get back to you shortly.
-									</p>
+								<!-- LEFT: CONTACT -->
+								<div class="col-lg-6">
+									<div class="contact-us-content">
 
-										<form action="<?= base_url('contact/send_mail'); ?>" method="post">
+										<div class="footer-widget-items contact-widget">
 
-										<div class="row">
-
-											<div class="col-md-6 mb-3">
-												<input type="text" name="name" class="form-control"
-													placeholder="Full Name *" required>
+											<div class="widget-head">
+												<span class="widget-title  text-white">Contact</span>
 											</div>
 
-											<div class="col-md-6 mb-3">
-												<input type="text" name="company_name" class="form-control"
-													placeholder="Company Name">
-											</div>
+											<ul class="contact-list">
 
-											<div class="col-md-6 mb-3">
-												<input type="tel" name="phone" class="form-control"
-													placeholder="Phone Number *" required>
-											</div>
+												<li>
+													<img src="<?php echo base_url()?>assets/website/img/home-1/call.png"
+														alt="Phone">
 
-											<div class="col-md-6 mb-3">
-												<input type="email" name="email" class="form-control"
-													placeholder="Email Address *" required>
-											</div>
+													<a class="text-white"
+														href="tel:<?= !empty($general->phone_no) ? htmlspecialchars($general->phone_no) : ''; ?>">
+														<?= !empty($general->phone_no) ? htmlspecialchars($general->phone_no) : ''; ?>
+													</a>
+												</li>
 
-											<div class="col-md-6 mb-3">
-												<label class="form-label">Select Services</label>
+												<li>
+													<img src="<?php echo base_url()?>assets/website/img/home-1/call.png"
+														alt="WhatsApp">
 
-												<select id="serviceshomepage" name="services[]" class="form-select"
-													multiple>
-													<?php foreach($services as $service): ?>
-													<option value="<?= base_url('service/'.$service->id); ?>">
-														<?= $service->service_name; ?>
-													</option>
-													<?php endforeach; ?>
+													<a class="text-white"
+														href="tel:<?= !empty($general->whatsApp_number) ? htmlspecialchars($general->whatsApp_number) : ''; ?>">
+														<?= !empty($general->whatsApp_number) ? htmlspecialchars($general->whatsApp_number) : ''; ?>
+													</a>
+												</li>
 
-												</select>
-											</div>
+												<li>
+													<img src="<?php echo base_url()?>assets/website/img/home-1/email.png"
+														alt="Email">
 
-											<div class="col-md-6 mb-3">
-												<label class="form-label">Select Products</label>
+													<a class="text-white"
+														href="mailto:<?= !empty($general->email_address) ? htmlspecialchars($general->email_address) : ''; ?>">
+														<?= !empty($general->email_address) ? htmlspecialchars($general->email_address) : ''; ?>
+													</a>
+												</li>
 
-												<select id="productshomepage" name="products[]" class="form-select"
-													multiple>
-													<option value="Nex Smart HR">Nex Smart HR</option>
-													<option value="CRM">CRM</option>
-													<option value="Nex DigiCard">Nex DigiCard</option>
-													<option value="NextWapp">NextWapp</option>
-												</select>
-											</div>
-
-											<div class="col-12 mb-3">
-												<textarea name="message" class="form-control" rows="5"
-													placeholder="Tell us about your project"></textarea>
-											</div>
-
-											<div class="col-12 text-center">
-												<button type="submit" class="btn btn-primary px-5 py-3">
-													Submit Enquiry
-												</button>
-											</div>
+											</ul>
 
 										</div>
 
-									</form>
+									</div>
+								</div>
 
+
+								<!-- RIGHT: FORM -->
+								<div class="col-lg-6">
+									<div class="contact-box">
+
+										<h3>Need Support? Contact Us</h3>
+
+										<form action="<?= base_url('contact/send_mail'); ?>" method="post">
+
+											<div class="row">
+
+												<div class="col-md-6 mb-3">
+													<input type="text" name="name" class="form-control"
+														placeholder="Full Name *" required>
+												</div>
+
+												<div class="col-md-6 mb-3">
+													<input type="text" name="company_name" class="form-control"
+														placeholder="Company Name">
+												</div>
+
+												<div class="col-md-6 mb-3">
+													<input type="tel" name="phone" class="form-control"
+														placeholder="Phone Number *" required>
+												</div>
+
+												<div class="col-md-6 mb-3">
+													<input type="email" name="email" class="form-control"
+														placeholder="Email Address *" required>
+												</div>
+
+												<div class="col-md-6 mb-3">
+													<label class="form-label">Select Services</label>
+
+													<select id="serviceshomepage" name="services[]" class="form-select"
+														multiple>
+
+														<?php foreach($services as $service): ?>
+
+														<option value="<?= base_url('service/'.$service->id); ?>">
+															<?= $service->service_name; ?>
+														</option>
+
+														<?php endforeach; ?>
+
+													</select>
+												</div>
+
+												<div class="col-md-6 mb-3">
+													<label class="form-label">Select Products</label>
+
+													<select id="productshomepage" name="products[]" class="form-select"
+														multiple>
+
+														<option value="Nex Smart HR">Nex Smart HR</option>
+														<option value="CRM">CRM</option>
+														<option value="Nex DigiCard">Nex DigiCard</option>
+														<option value="NextWapp">NextWapp</option>
+
+													</select>
+												</div>
+
+												<div class="col-12 mb-3">
+													<textarea name="message" class="form-control" rows="5"
+														placeholder="Tell us about your project"></textarea>
+												</div>
+
+												<div class="col-12 text-center">
+													<button type="submit" class="btn btn-primary px-5 py-3">
+														Submit Enquiry
+													</button>
+												</div>
+
+											</div>
+
+										</form>
+
+									</div>
 								</div>
 
 							</div>
+
 						</div>
 
 					</div>

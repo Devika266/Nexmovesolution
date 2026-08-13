@@ -36,10 +36,15 @@ class Admin_model extends CI_Model {
     }
     // Get one service by ID
     public function get_service($id)
-    {
-        $this->db->where('id', $id);
-        return $this->db->get('service')->row();   // <-- service, not services
-    }
+{
+    $this->db->where('id', $id);
+    return $this->db->get('service')->row();
+}
+public function get_service_by_slug($slug)
+{
+    $this->db->where('slug', $slug);
+    return $this->db->get('service')->row();
+}
     
     public function au_portfolio($data, $id = '')
 {
@@ -62,7 +67,7 @@ class Admin_model extends CI_Model {
     // Get one service by ID
     public function get_portfolio($id)
     {
-        $this->db->where('id', $id);
+        $this->db->where('slug', $id);
         return $this->db->get('portfolio')->row();   // <-- service, not services
     }
      public function au_blog($data, $id = '')
@@ -89,9 +94,9 @@ class Admin_model extends CI_Model {
         return $this->db->get('blog')->result();
     }
     // Get one service by ID
-    public function get_blog($id)
+    public function get_blog($slug)
     {
-        $this->db->where('id', $id);
+        $this->db->where('slug', $slug);
         return $this->db->get('blog')->row();  
     }
 

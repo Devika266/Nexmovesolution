@@ -140,18 +140,39 @@
 
 															<div class="space-y-5">
 
-																<div>
+																<div class="xl:col-span-2">
 
-																	<label class="text-sm font-medium mb-2 block">
-																		Hero Title
-																	</label>
+    <label class="text-sm font-medium mb-2 block">
+        Blog Title
+    </label>
 
-																	<input type="text" name="hero_tittle"
-																		placeholder="The Future Business Operations"
-																		class="w-full h-11 rounded-xl border border-input bg-background px-4"
-																		value="<?php echo isset($blog->hero_tittle)?$blog->hero_tittle:''; ?>">
+    <input type="text"
+        name="blog_title"
+        id="blog_title"
+        placeholder="Enter blog title"
+        class="w-full h-11 rounded-xl border border-input bg-background px-4"
+        value="<?php echo isset($blog->blog_title) ? $blog->blog_title : ''; ?>">
 
-																</div>
+</div>
+
+<div class="xl:col-span-2">
+
+    <label class="text-sm font-medium mb-2 block">
+        Blog Slug
+    </label>
+
+    <input type="text"
+        name="slug"
+        id="blog_slug"
+        placeholder="Enter blog slug"
+        class="w-full h-11 rounded-xl border border-input bg-background px-4"
+        value="<?php echo isset($blog->slug) ? $blog->slug : ''; ?>">
+
+    <p class="text-xs text-muted-foreground mt-1">
+        Example: the-future-of-cybersecurity
+    </p>
+
+</div>
 
 																<div>
 

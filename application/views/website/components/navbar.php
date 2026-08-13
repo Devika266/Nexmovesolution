@@ -163,14 +163,14 @@
 							</a>
 
 							<ul class="sub-menu list-unstyled">
-								<?php foreach($services as $ser): ?>
-								<li>
-									<a href="<?= base_url();?>service/<?= $ser->id;?>">
-										<?= $ser->service_name;?>
-									</a>
-								</li>
-								<?php endforeach; ?>
-							</ul>
+    <?php foreach($services as $ser): ?>
+        <li>
+            <a href="<?= base_url('services/'.$ser->slug); ?>">
+                <?= htmlspecialchars($ser->service_name); ?>
+            </a>
+        </li>
+    <?php endforeach; ?>
+</ul>
 						</li>
 
 						<li class="nav-item dropdown">

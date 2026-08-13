@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
 	<!-- Primary Meta Tags -->
-<title>About NexMove Solutions | Leading IT Company in Navi Mumbai</title>
-<meta name="title" content="About NexMove Solutions | Leading IT Company in Navi Mumbai" />
-<meta name="description" content="Learn about NexMove Solutions, a trusted IT company delivering innovative web development, software, cloud, cybersecurity, and digital marketing services." />
+<title>About Nexmove Solutions | Leading IT Company in Navi Mumbai</title>
+<meta name="title" content="About Nexmove Solutions | Leading IT Company in Navi Mumbai" />
+<meta name="description" content="Learn about Nexmove Solutions, a trusted IT company delivering innovative web development, software, cloud, cybersecurity, and digital marketing services." />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://nexmovesolutions.in/" />
-<meta property="og:title" content="About NexMove Solutions | Leading IT Company in Navi Mumbai" />
-<meta property="og:description" content="Learn about NexMove Solutions, a trusted IT company delivering innovative web development, software, cloud, cybersecurity, and digital marketing services." />
+<meta property="og:url" content="https://Nexmovesolutions.in/" />
+<meta property="og:title" content="About Nexmove Solutions | Leading IT Company in Navi Mumbai" />
+<meta property="og:description" content="Learn about Nexmove Solutions, a trusted IT company delivering innovative web development, software, cloud, cybersecurity, and digital marketing services." />
 
 
 <!-- X (Twitter) -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://nexmovesolutions.in/" />
-<meta property="twitter:title" content="About NexMove Solutions | Leading IT Company in Navi Mumbai" />
-<meta property="twitter:description" content="Learn about NexMove Solutions, a trusted IT company delivering innovative web development, software, cloud, cybersecurity, and digital marketing services." />
+<meta property="twitter:url" content="https://Nexmovesolutions.in/" />
+<meta property="twitter:title" content="About Nexmove Solutions | Leading IT Company in Navi Mumbai" />
+<meta property="twitter:description" content="Learn about Nexmove Solutions, a trusted IT company delivering innovative web development, software, cloud, cybersecurity, and digital marketing services." />
 
 <!-- Meta Tags Generated with https://metatags.io -->
 </head>
@@ -77,7 +77,7 @@
 										<h2><span class="count">5</span><sup>+</sup></h2>
 										<p>
 											Founded with a vision to deliver practical, scalable, and innovative digital
-											solutions, NexMove Solutions partners with businesses to automate
+											solutions, Nexmove Solutions partners with businesses to automate
 											operations, improve productivity, and build a stronger digital presence.
 										</p>
 									</div>
@@ -102,7 +102,7 @@
 							<div class="col-lg-5">
 								<div class="section-title style-2 mb-0">
 									<div class="tz-sub-tilte tz-sub-anim tx-subTitle">
-										<span class="sub-title">Why Choose NexMoves</span>
+										<span class="sub-title">Why Choose Nexmoves</span>
 									</div>
 								</div>
 								<div class="feature-image">
@@ -158,7 +158,7 @@
 				<div class="container">
 					<div class="text-center">
 						<div class="text wa_title_spilt_1">
-							Trusted by over <b>1.7 million</b> companies worldwide.
+							Trusted by <b>leading brands and innovative</b> teams.
 						</div>
 					</div>
 				</div>
@@ -261,87 +261,144 @@
 			<footer class="footer-section fix hero-ptb image-distortion p-relative z-index-1"
 				data-background="<?php echo base_url()?>assets/website/img/home-2/footer-bg.jpg">
 
-				<section class="cta-form-section py-5">
+				<section class="contact-us-section section-padding fix">
 					<div class="container">
 
-						<div class="row justify-content-center">
-							<div class="col-lg-8">
+						<div class="contact-us-wrapper">
 
-								<div class="cta-form-card">
+							<div class="row g-4">
 
-									<h2 class="mb-2">Let's Discuss Your Requirements</h2>
-									<p class="mb-4">
-										Fill out the form below and our team will get back to you shortly.
-									</p>
+								<!-- LEFT: CONTACT -->
+								<div class="col-lg-6">
+									<div class="contact-us-content">
 
-										<form action="<?= base_url('contact/send_mail'); ?>" method="post">
+										<div class="footer-widget-items contact-widget">
 
-										<div class="row">
-
-											<div class="col-md-6 mb-3">
-												<input type="text" name="name" class="form-control"
-													placeholder="Full Name *" required>
+											<div class="widget-head">
+												<span class="widget-title  text-white">Contact</span>
 											</div>
 
-											<div class="col-md-6 mb-3">
-												<input type="text" name="company_name" class="form-control"
-													placeholder="Company Name">
-											</div>
+											<ul class="contact-list">
 
-											<div class="col-md-6 mb-3">
-												<input type="tel" name="phone" class="form-control"
-													placeholder="Phone Number *" required>
-											</div>
+												<li>
+													<img src="<?php echo base_url()?>assets/website/img/home-1/call.png"
+														alt="Phone">
 
-											<div class="col-md-6 mb-3">
-												<input type="email" name="email" class="form-control"
-													placeholder="Email Address *" required>
-											</div>
+													<a class="text-white"
+														href="tel:<?= !empty($general->phone_no) ? htmlspecialchars($general->phone_no) : ''; ?>">
+														<?= !empty($general->phone_no) ? htmlspecialchars($general->phone_no) : ''; ?>
+													</a>
+												</li>
 
-											<div class="col-md-6 mb-3">
-												<label class="form-label">Select Services</label>
+												<li>
+													<img src="<?php echo base_url()?>assets/website/img/home-1/call.png"
+														alt="WhatsApp">
 
-												<select id="serviceshomepage" name="services[]" class="form-select"
-													multiple>
-													<?php foreach($services as $service): ?>
-													<option value="<?= base_url('service/'.$service->id); ?>">
-														<?= $service->service_name; ?>
-													</option>
-													<?php endforeach; ?>
+													<a class="text-white"
+														href="tel:<?= !empty($general->whatsApp_number) ? htmlspecialchars($general->whatsApp_number) : ''; ?>">
+														<?= !empty($general->whatsApp_number) ? htmlspecialchars($general->whatsApp_number) : ''; ?>
+													</a>
+												</li>
 
-												</select>
-											</div>
+												<li>
+													<img src="<?php echo base_url()?>assets/website/img/home-1/email.png"
+														alt="Email">
 
-											<div class="col-md-6 mb-3">
-												<label class="form-label">Select Products</label>
+													<a class="text-white"
+														href="mailto:<?= !empty($general->email_address) ? htmlspecialchars($general->email_address) : ''; ?>">
+														<?= !empty($general->email_address) ? htmlspecialchars($general->email_address) : ''; ?>
+													</a>
+												</li>
 
-												<select id="productshomepage" name="products[]" class="form-select"
-													multiple>
-													<option value="Nex Smart HR">Nex Smart HR</option>
-													<option value="CRM">CRM</option>
-													<option value="Nex DigiCard">Nex DigiCard</option>
-													<option value="NextWapp">NextWapp</option>
-												</select>
-											</div>
-
-											<div class="col-12 mb-3">
-												<textarea name="message" class="form-control" rows="5"
-													placeholder="Tell us about your project"></textarea>
-											</div>
-
-											<div class="col-12 text-center">
-												<button type="submit" class="btn btn-primary px-5 py-3">
-													Submit Enquiry
-												</button>
-											</div>
+											</ul>
 
 										</div>
 
-									</form>
+									</div>
+								</div>
 
+
+								<!-- RIGHT: FORM -->
+								<div class="col-lg-6">
+									<div class="contact-box">
+
+										<h3>Need Support? Contact Us</h3>
+
+										<form action="<?= base_url('contact/send_mail'); ?>" method="post">
+
+											<div class="row">
+
+												<div class="col-md-6 mb-3">
+													<input type="text" name="name" class="form-control"
+														placeholder="Full Name *" required>
+												</div>
+
+												<div class="col-md-6 mb-3">
+													<input type="text" name="company_name" class="form-control"
+														placeholder="Company Name">
+												</div>
+
+												<div class="col-md-6 mb-3">
+													<input type="tel" name="phone" class="form-control"
+														placeholder="Phone Number *" required>
+												</div>
+
+												<div class="col-md-6 mb-3">
+													<input type="email" name="email" class="form-control"
+														placeholder="Email Address *" required>
+												</div>
+
+												<div class="col-md-6 mb-3">
+													<label class="form-label">Select Services</label>
+
+													<select id="serviceshomepage" name="services[]" class="form-select"
+														multiple>
+
+														<?php foreach($services as $service): ?>
+
+														<option value="<?= base_url('service/'.$service->id); ?>">
+															<?= $service->service_name; ?>
+														</option>
+
+														<?php endforeach; ?>
+
+													</select>
+												</div>
+
+												<div class="col-md-6 mb-3">
+													<label class="form-label">Select Products</label>
+
+													<select id="productshomepage" name="products[]" class="form-select"
+														multiple>
+
+														<option value="Nex Smart HR">Nex Smart HR</option>
+														<option value="CRM">CRM</option>
+														<option value="Nex DigiCard">Nex DigiCard</option>
+														<option value="NextWapp">NextWapp</option>
+
+													</select>
+												</div>
+
+												<div class="col-12 mb-3">
+													<textarea name="message" class="form-control" rows="5"
+														placeholder="Tell us about your project"></textarea>
+												</div>
+
+												<div class="col-12 text-center">
+													<button type="submit" class="btn btn-primary px-5 py-3">
+														Submit Enquiry
+													</button>
+												</div>
+
+											</div>
+
+										</form>
+
+									</div>
 								</div>
 
 							</div>
+
 						</div>
 
 					</div>

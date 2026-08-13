@@ -21,7 +21,7 @@ class Welcome extends CI_Controller {
 public function index()
 {
      $this->load->model('Admin_model');
-
+    $data['general'] = $this->Admin_model->general();
     $data['portfolios'] = $this->Admin_model->get_portfolios();
     $data['services'] = $this->Admin_model->service();
     $data['blogs'] = $this->Admin_model->get_latest_blogs(3);
@@ -31,7 +31,7 @@ public function index()
 public function home()
 {
     $this->load->model('Admin_model');
-
+    $data['general'] = $this->Admin_model->general();
     $data['portfolios'] = $this->Admin_model->get_portfolios();
     $data['services'] = $this->Admin_model->service();
     $data['blogs'] = $this->Admin_model->get_latest_blogs(3);
@@ -67,13 +67,14 @@ public function thank_you()
 public function about()
 	{
 		$this->load->model('Admin_model');
-
+    $data['general'] = $this->Admin_model->general();
      $data['portfolios'] = $this->Admin_model->get_portfolios();
      $data['services'] = $this->Admin_model->service();
     $this->load->view('website/about', $data);
 	}
 public function blog()
 	{
+        $data['general'] = $this->Admin_model->general();
         $data['services'] = $this->Admin_model->service();
 		$this->load->model('Admin_model');
 
@@ -84,6 +85,7 @@ $data['blogs'] = $this->Admin_model->blog();
 	}
 public function portfoliomain()
 {
+    $data['general'] = $this->Admin_model->general();
     $data['services'] = $this->Admin_model->service();
     $this->load->model('Admin_model');
 
@@ -91,12 +93,18 @@ public function portfoliomain()
 
     $this->load->view('website/portfoliomain', $data);
 }
-	public function service($id)
-	{
-        $data['services'] = $this->Admin_model->service();
-		
-		 $service = $this->Admin_model->get_service($id);
-	
+	public function service($slug)
+{
+    $data['general'] = $this->Admin_model->general();
+    $data['services'] = $this->Admin_model->service();
+
+    // Get service by slug
+    $service = $this->Admin_model->get_service_by_slug($slug);
+
+    if (empty($service)) {
+        show_404();
+        return;
+    }
 
     $data['service'] = $service;
 
@@ -119,16 +127,20 @@ public function portfoliomain()
     $technologies = !empty($service->technologies)
         ? json_decode($service->technologies, true)
         : [];
-    $data['technologies'] = is_array($technologies) ? $technologies : [];
+
+    $data['technologies'] = is_array($technologies)
+        ? $technologies
+        : [];
 
     $this->load->view('website/service', $data);
-	}
-	public function blogdetail($id)
+}
+	public function blogdetail($slug)
 {
+    $data['general'] = $this->Admin_model->general();
     $this->load->model('Admin_model');
     $data['services'] = $this->Admin_model->service();
 
-    $data['blog'] = $this->Admin_model->get_blog($id);
+    $data['blog'] = $this->Admin_model->get_blog($slug);
 
     if (empty($data['blog'])) {
         show_404();
@@ -138,6 +150,7 @@ public function portfoliomain()
 }
 	public function contact()
 	{
+
         $data['services'] = $this->Admin_model->service();
 		$this->load->model('Admin_model');
 
@@ -146,15 +159,13 @@ public function portfoliomain()
     $this->load->view('website/contact', $data);
 	}
 
-	public function portfolio($id)
+	public function portfolio($slug)
 {
+    $data['general'] = $this->Admin_model->general();
      $this->load->model('Admin_model');
     $data['services'] = $this->Admin_model->service();
-    $data['portfolio'] = $this->Admin_model->get_portfolio($id);
+    $data['portfolio'] = $this->Admin_model->get_portfolio($slug);
 
-    if (!$data['portfolio']) {
-        show_404();
-    }
 
     $this->load->view('website/portfolio', $data);
 }
