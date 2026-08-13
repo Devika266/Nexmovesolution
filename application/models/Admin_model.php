@@ -65,11 +65,18 @@ public function get_service_by_slug($slug)
         return $this->db->get('portfolio')->result();
     }
     // Get one service by ID
-    public function get_portfolio($id)
+    public function get_portfolio($slug)
     {
-        $this->db->where('slug', $id);
+        $this->db->where('id', $slug);
         return $this->db->get('portfolio')->row();   // <-- service, not services
     }
+
+    public function get_portfolio_slug($slug)
+    {
+        $this->db->where('slug', $slug);
+        return $this->db->get('portfolio')->row();   // <-- service, not services
+    }
+
      public function au_blog($data, $id = '')
 {
     if (empty($id)) {

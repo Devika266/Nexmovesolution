@@ -164,7 +164,7 @@ public function portfoliomain()
     $data['general'] = $this->Admin_model->general();
      $this->load->model('Admin_model');
     $data['services'] = $this->Admin_model->service();
-    $data['portfolio'] = $this->Admin_model->get_portfolio($slug);
+    $data['portfolio'] = $this->Admin_model->get_portfolio_slug($slug);
 
 
     $this->load->view('website/portfolio', $data);

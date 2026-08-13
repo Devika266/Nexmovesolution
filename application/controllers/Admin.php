@@ -368,7 +368,8 @@ class Admin extends CI_Controller {
 		$id=$this->input->post('id');
 
 		$data['project_name']=$this->input->post('project_name');
-$data['slug'] = trim($this->input->post('slug', true));		$data['client_name']=$this->input->post('client_name');
+		$data['slug'] = str_replace(' ','_',$this->input->post('project_name'));
+		$data['client_name']=$this->input->post('client_name');
 		$data['service']=$this->input->post('service');
 		$data['platform']=$this->input->post('platform');
 		$data['project_date']=$this->input->post('project_date');
