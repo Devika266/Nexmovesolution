@@ -18,9 +18,6 @@
  							</a>
  						</div>
  						<div class="footer-content">
- 							<p>
- 								Bring in your business data from different tools platform.
- 							</p>
  							<div class="social-icon d-flex align-items-center">
  								<a href="https://www.facebook.com/NexmoveSolutions/" target="_blank" rel="noopener noreferrer"><i
  										class="fab fa-facebook-f"></i></a>
