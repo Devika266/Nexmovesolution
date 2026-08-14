@@ -74,10 +74,10 @@
 									<!-- Dynamic Service Image -->
 									<div class="details-image">
 										<img src="<?php echo (!empty($service->service_image)) 
-        ? base_url('uploads/' . $service->service_image) 
-        : base_url('assets/website/img/inner-page/service-details.jpg'); ?>" alt="<?php echo !empty($service->service_name) 
-        ? htmlspecialchars($service->service_name) 
-        : 'Service Image'; ?>">
+											? base_url('uploads/' . $service->service_image) 
+											: base_url('assets/website/img/inner-page/service-details.jpg'); ?>" alt="<?php echo !empty($service->service_name) 
+											? htmlspecialchars($service->service_name) 
+											: 'Service Image'; ?>">
 									</div>
 
 									<!-- Dynamic Service Description -->
@@ -139,7 +139,7 @@
                                         ?>
 
 											<li>
-											<a href="<?= base_url('services/' . $other_service->slug); ?>">
+												<a href="<?= base_url('services/' . $other_service->slug); ?>">
 													<span>
 														<?php echo !empty($other_service->service_name)
                                                         ? htmlspecialchars($other_service->service_name)
@@ -170,7 +170,7 @@
 
 									<!-- SIDEBAR IMAGE / CTA -->
 									<div class="sidebar-widget-image wow fadeInUp" data-wow-delay=".5s">
-										<img src="<?php echo base_url()?>assets/img/service-details-4.jpg" alt="img">
+										<img src="<?php echo base_url()?>assets/img/service.jpg" alt="img">
 
 										<div class="content">
 											<h4>Need any IT Solution services?</h4>
@@ -179,21 +179,22 @@
 											</p>
 										</div>
 
-										<a class="theme-btn-main style-2 theme-2" href="javascript:void(0)" onclick="openPopup()">
+										<a class="theme-btn-main style-2 theme-2" href="javascript:void(0)"
+											onclick="openPopup()">
 
-							<span class="theme-btn-arrow-left">
-								<i class="fa-solid fa-arrow-up-right"></i>
-							</span>
+											<span class="theme-btn-arrow-left">
+												<i class="fa-solid fa-arrow-up-right"></i>
+											</span>
 
-							<span class="theme-btn">
-								Get Started
-							</span>
+											<span class="theme-btn">
+												Get Started
+											</span>
 
-							<span class="theme-btn-arrow-right">
-								<i class="fa-solid fa-arrow-up-right"></i>
-							</span>
+											<span class="theme-btn-arrow-right">
+												<i class="fa-solid fa-arrow-up-right"></i>
+											</span>
 
-						</a>
+										</a>
 									</div>
 
 								</div>
