@@ -79,12 +79,12 @@
 									</div>
 									<div class="content">
 										<h3 class="title">
-											<a href="<?= base_url('portfolio/' . $portfolio->id); ?>">
+											<a href="<?= base_url('portfolio/' . $portfolio->slug); ?>">
 												<?= htmlspecialchars($portfolio->project_name); ?>
 											</a>
 										</h3>
 										<p>
-											<a href="<?= base_url('portfolio/' . $portfolio->id); ?>">
+											<a href="<?= base_url('portfolio/' . $portfolio->slug); ?>">
 												<?= htmlspecialchars($portfolio->section_heading); ?>
 											</a>
 										</p>

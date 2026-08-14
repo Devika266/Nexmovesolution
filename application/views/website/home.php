@@ -367,7 +367,7 @@
 
 									<div class="icon-items">
 										<div class="icon">
-											<img src="<?= base_url()?>assets/website/img/home-2/service-icon-1.svg">
+											<img src="<?= base_url()?>assets/website/img/home-2/service-icon-1.svg" alt="img">
 										</div>
 										<a class="theme-btn-main style-2"
 											href="<?= base_url('service/'.$service->id); ?>">
@@ -644,7 +644,7 @@
 								</span>
 
 								<h3 class="title">
-									<a href="<?= base_url('welcome/portfolio/'.$portfolio->id); ?>">
+									<a href="<?= base_url('welcome/portfolio/'.$portfolio->slug); ?>">
 										<?= htmlspecialchars($portfolio->project_name); ?>
 									</a>
 								</h3>
@@ -653,7 +653,7 @@
 									<?= character_limiter(strip_tags($portfolio->overview_description), 140); ?>
 								</p>
 
-								<a href="<?= base_url('welcome/portfolio/'.$portfolio->id); ?>" class="news-btn">
+								<a href="<?= base_url('welcome/portfolio/'.$portfolio->slug); ?>" class="news-btn">
 									<span class="text">
 										<span class="text-default">
 											Explore More
