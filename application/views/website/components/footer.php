@@ -19,12 +19,12 @@
  						</div>
  						<div class="footer-content">
  							<div class="social-icon d-flex align-items-center">
- 								<a href="https://www.facebook.com/NexmoveSolutions/" target="_blank" rel="noopener noreferrer"><i
- 										class="fab fa-facebook-f"></i></a>
- 								<a href="https://www.instagram.com/nexmove_solutions/" target="_blank" rel="noopener noreferrer"><i
- 										class="fab fa-instagram"></i></a>
- 								<a href="https://in.linkedin.com/company/nexmove-solutions" target="_blank" rel="noopener noreferrer"><i
- 										class="fab fa-linkedin"></i></a>
+ 								<a href="https://www.facebook.com/NexmoveSolutions/" target="_blank"
+ 									rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+ 								<a href="https://www.instagram.com/nexmove_solutions/" target="_blank"
+ 									rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+ 								<a href="https://in.linkedin.com/company/nexmove-solutions" target="_blank"
+ 									rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
  							</div>
  						</div>
  					</div>
@@ -45,16 +45,16 @@
  								<a href="<?= base_url('website/about'); ?>">About Us</a>
  							</li>
  							<li>
-							<a href="<?= base_url();?>portfoliomain">Portfolio</a>
-						</li>
+ 								<a href="<?= base_url();?>portfoliomain">Portfolio</a>
+ 							</li>
 
-						<li>
-							<a href="<?= base_url();?>website/blog">Blog</a>
-						</li>
+ 							<li>
+ 								<a href="<?= base_url();?>website/blog">Blog</a>
+ 							</li>
 
-						<li>
-							<a href="<?= base_url();?>website/contact">Contact</a>
-						</li>
+ 							<li>
+ 								<a href="<?= base_url();?>website/contact">Contact</a>
+ 							</li>
 
  						</ul>
 
@@ -84,16 +84,17 @@
  						<div class="widget-head">
  							<span class="widget-title">Service</span>
  						</div>
+ 						<ul class="gt-list-area">
+ 							<?php foreach($services as $ser): ?>
+ 							<li>
+ 								<a href="<?= base_url('services/'.$ser->slug); ?>">
+ 									<?= htmlspecialchars($ser->service_name); ?>
+ 								</a>
+ 							</li>
+ 							<?php endforeach; ?>
+ 						</ul>
 
- 						<ul class="sub-menu list-unstyled">
-    <?php foreach($services as $ser): ?>
-        <li>
-            <a href="<?= base_url('services/'.$ser->slug); ?>">
-                <?= htmlspecialchars($ser->service_name); ?>
-            </a>
-        </li>
-    <?php endforeach; ?>
-</ul>
+
 
  					</div>
  				</div>
