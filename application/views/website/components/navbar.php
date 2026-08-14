@@ -136,7 +136,7 @@
 
 				<!-- Logo -->
 				<a class="navbar-brand" href="<?= base_url(); ?>">
-					<img src="<?= base_url()?>assets/website/img/logo/main-logo.png" alt="Logo" class="logo-img">
+					<img src="<?= base_url()?>assets/website/img/logo/main-logo.png" alt="Logo" class="logo-img" style="width:200px">
 				</a>
 
 				<!-- Toggle -->
