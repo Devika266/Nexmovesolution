@@ -273,15 +273,15 @@
 								<a href="javascript:void(0)">
 									Services <i class="fas fa-chevron-down float-end"></i>
 								</a>
-								<ul class="list-unstyled">
-									<?php foreach($services as $ser): ?>
-									<li>
-										<a href="<?php echo base_url(); ?>service/<?php echo $ser->id; ?>">
-											<?php echo $ser->service_name; ?>
-										</a>
-									</li>
-									<?php endforeach; ?>
-								</ul>
+															<ul class="sub-menu list-unstyled">
+    <?php foreach($services as $ser): ?>
+        <li>
+            <a href="<?= base_url('services/'.$ser->slug); ?>">
+                <?= htmlspecialchars($ser->service_name); ?>
+            </a>
+        </li>
+    <?php endforeach; ?>
+</ul>
 							</li>
 
 							<li class="sub-mobile-menu">
