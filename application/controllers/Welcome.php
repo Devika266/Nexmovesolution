@@ -74,100 +74,116 @@ public function about()
 	}
 public function blog()
 	{
-        $data['general'] = $this->Admin_model->general();
-        $data['services'] = $this->Admin_model->service();
 		$this->load->model('Admin_model');
+		$data['general'] = $this->Admin_model->general();
+		$data['services'] = $this->Admin_model->service();
 
+		$data['blogs'] = $this->Admin_model->blog();
 
-$data['blogs'] = $this->Admin_model->blog();
-
-    $this->load->view('website/blog', $data);
+		$this->load->view('website/blog', $data);
 	}
 public function portfoliomain()
 {
-    $data['general'] = $this->Admin_model->general();
-    $data['services'] = $this->Admin_model->service();
-    $this->load->model('Admin_model');
+	$this->load->model('Admin_model');
+	$data['general'] = $this->Admin_model->general();
+	$data['services'] = $this->Admin_model->service();
 
-    $data['portfolios'] = $this->Admin_model->get_portfolios();
+	$data['portfolios'] = $this->Admin_model->get_portfolios();
 
-    $this->load->view('website/portfoliomain', $data);
+	$this->load->view('website/portfoliomain', $data);
 }
 	public function service($slug)
 {
-    $data['general'] = $this->Admin_model->general();
-    $data['services'] = $this->Admin_model->service();
+	$this->load->model('Admin_model');
+	$data['general'] = $this->Admin_model->general();
+	$data['services'] = $this->Admin_model->service();
 
-    // Get service by slug
-    $service = $this->Admin_model->get_service_by_slug($slug);
+	// Get service by slug or ID
+	if (is_numeric($slug)) {
+		$service = $this->Admin_model->get_service($slug);
+	} else {
+		$service = $this->Admin_model->get_service_by_slug($slug);
+	}
 
-    if (empty($service)) {
-        show_404();
-        return;
-    }
+	if (empty($service)) {
+		show_404();
+		return;
+	}
 
-    $data['service'] = $service;
+	$data['service'] = $service;
 
-    // Offers
-    $data['offers'] = !empty($service->offers)
-        ? json_decode($service->offers, true)
-        : [];
+	// Offers
+	$data['offers'] = !empty($service->offers)
+		? json_decode($service->offers, true)
+		: [];
 
-    // Work Process
-    $data['steps'] = !empty($service->steps)
-        ? json_decode($service->steps, true)
-        : [];
+	// Work Process
+	$data['steps'] = !empty($service->steps)
+		? json_decode($service->steps, true)
+		: [];
 
-    // Benefits
-    $data['benefits'] = !empty($service->benefits)
-        ? json_decode($service->benefits, true)
-        : [];
+	// Benefits
+	$data['benefits'] = !empty($service->benefits)
+		? json_decode($service->benefits, true)
+		: [];
 
-    // Technologies
-    $technologies = !empty($service->technologies)
-        ? json_decode($service->technologies, true)
-        : [];
+	// Technologies
+	$technologies = !empty($service->technologies)
+		? json_decode($service->technologies, true)
+		: [];
 
-    $data['technologies'] = is_array($technologies)
-        ? $technologies
-        : [];
+	$data['technologies'] = is_array($technologies)
+		? $technologies
+		: [];
 
-    $this->load->view('website/service', $data);
+	$this->load->view('website/service', $data);
 }
 	public function blogdetail($slug)
 {
-    $data['general'] = $this->Admin_model->general();
-    $this->load->model('Admin_model');
-    $data['services'] = $this->Admin_model->service();
+	$this->load->model('Admin_model');
+	$data['general'] = $this->Admin_model->general();
+	$data['services'] = $this->Admin_model->service();
 
-    $data['blog'] = $this->Admin_model->get_blog($slug);
+	$blog = $this->Admin_model->get_blog($slug);
 
-    if (empty($data['blog'])) {
-        show_404();
-    }
+	if (empty($blog)) {
+		show_404();
+		return;
+	}
 
-    $this->load->view('website/blogdetail', $data);
+	$data['blog'] = $blog;
+
+	$this->load->view('website/blogdetail', $data);
 }
 	public function contact()
 	{
-
-        $data['services'] = $this->Admin_model->service();
 		$this->load->model('Admin_model');
+		$data['services'] = $this->Admin_model->service();
+		$data['settings'] = $this->Admin_model->general();
 
-    $data['settings'] = $this->Admin_model->general();
-
-    $this->load->view('website/contact', $data);
+		$this->load->view('website/contact', $data);
 	}
 
 	public function portfolio($slug)
 {
-    $data['general'] = $this->Admin_model->general();
-     $this->load->model('Admin_model');
-    $data['services'] = $this->Admin_model->service();
-    $data['portfolio'] = $this->Admin_model->get_portfolio_slug($slug);
+	$this->load->model('Admin_model');
+	$data['general'] = $this->Admin_model->general();
+	$data['services'] = $this->Admin_model->service();
+	
+	if (is_numeric($slug)) {
+		$portfolio = $this->Admin_model->get_portfolio($slug);
+	} else {
+		$portfolio = $this->Admin_model->get_portfolio_slug($slug);
+	}
 
+	if (empty($portfolio)) {
+		show_404();
+		return;
+	}
 
-    $this->load->view('website/portfolio', $data);
+	$data['portfolio'] = $portfolio;
+
+	$this->load->view('website/portfolio', $data);
 }
 }
 

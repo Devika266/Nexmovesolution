@@ -75,7 +75,7 @@
 									<div class="details-image">
 										<img src="<?php echo (!empty($service->service_image)) 
         ? base_url('uploads/' . $service->service_image) 
-        : base_url('assets/img/inner-page/service-details.jpg'); ?>" alt="<?php echo !empty($service->service_name) 
+        : base_url('assets/website/img/inner-page/service-details.jpg'); ?>" alt="<?php echo !empty($service->service_name) 
         ? htmlspecialchars($service->service_name) 
         : 'Service Image'; ?>">
 									</div>

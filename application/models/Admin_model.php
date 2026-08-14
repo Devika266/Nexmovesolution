@@ -103,7 +103,11 @@ public function get_service_by_slug($slug)
     // Get one service by ID
     public function get_blog($slug)
     {
-        $this->db->where('slug', $slug);
+        if (is_numeric($slug)) {
+            $this->db->where('id', $slug);
+        } else {
+            $this->db->where('slug', $slug);
+        }
         return $this->db->get('blog')->row();  
     }
 

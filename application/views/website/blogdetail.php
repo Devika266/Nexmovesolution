@@ -84,7 +84,7 @@
 			</section>
 			<!-- Footer Section Start -->
 			<footer class="footer-section fix hero-ptb image-distortion p-relative z-index-1"
-				data-background="assets/img/home-2/footer-bg.jpg">
+				data-background="<?= base_url('assets/website/img/home-2/footer-bg.jpg'); ?>">
 
 				<section class="contact-us-section section-padding fix">
 					<div class="container">

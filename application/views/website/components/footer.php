@@ -12,7 +12,7 @@
  				<div class="col-xl-5 col-lg-5 col-md-12 wow fadeInUp" data-wow-delay=".2s">
  					<div class="footer-widget-items">
  						<div class="widget-head">
- 							<a href="home" class="footer-logo">
+ 							<a href="<?= base_url(); ?>" class="footer-logo">
  								<img src="<?php echo base_url()?>assets/website/img/logo/main-logo.png" alt="img"
  									style="width:200px">
  							</a>

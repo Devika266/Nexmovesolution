@@ -1129,7 +1129,7 @@
 											<?= htmlspecialchars($blog->blog_title); ?>
 										</a>
 									</h3>
-									<a class="theme-btn-main style-2" href="<?= base_url('blogdetails/'.$blog->id); ?>">
+									<a class="theme-btn-main style-2" href="<?= base_url('blogdetail/'.$blog->id); ?>">
 										<span class="theme-btn-arrow-left"> <i class="fa-solid fa-arrow-up-right"></i>
 										</span>
 										<span class="theme-btn">Read More</span>

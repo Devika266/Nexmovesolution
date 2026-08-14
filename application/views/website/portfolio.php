@@ -120,13 +120,13 @@
 								<div class="row g-4">
 									<div class="col-lg-6">
 										<div class="thumb">
-											<img data-speed=".8" src="assets/img/inner-page/project-details-2.jpg"
+											<img data-speed=".8" src="<?= base_url('assets/website/img/inner-page/project-details-2.jpg'); ?>"
 												alt="img">
 										</div>
 									</div>
 									<div class="col-lg-6">
 										<div class="thumb">
-											<img data-speed=".8" src="assets/img/inner-page/project-details-3.jpg"
+											<img data-speed=".8" src="<?= base_url('assets/website/img/inner-page/project-details-3.jpg'); ?>"
 												alt="img">
 										</div>
 									</div>
